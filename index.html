@@ -7,8 +7,8 @@
     <!-- ---------------------------------------------------- -->
     <!--               PWA o AWP manifest                    -->
     <!-- --------------------------------------------------- -->
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#951b81">
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#951b81" />
     <!-- https://getmdl.io/ -->
     <link
       rel="stylesheet"
@@ -18,7 +18,10 @@
       rel="stylesheet"
       href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
     /> -->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-orange.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.teal-orange.min.css"
+    />
 
     <!-- https://fonts.google.com/icons -->
 
@@ -29,7 +32,7 @@
   <body>
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header  nav-bar">
+      <header class="mdl-layout__header nav-bar">
         <div class="mdl-layout__header-row">
           <!-- Title -->
           <span class="mdl-layout-title">Super Lista Productos</span>
@@ -55,34 +58,33 @@
       </div>
       <main class="mdl-layout__content">
         <div class="page-content">
-             <!-- Your content goes here -->
+          <!-- Your content goes here -->
 
-             <!-- ---------------------------------------------------- -->
+          <!-- ---------------------------------------------------- -->
           <!--                          BANNER                          -->
           <!-- --------------------------------------------------- -->
 
           <div>
-            <img src="./images/img-superlista.jpeg" alt="photo-supermarket">
+            <img src="./images/img-superlista.jpeg" alt="photo-supermarket" />
           </div>
-             
+
           <!-- ---------------------------------------------------- -->
           <!--                DELETE PRODUCT DIALOG "MODAL"         -->
           <!-- --------------------------------------------------- -->
-            <!-- <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button> -->
-            <dialog class="mdl-dialog">
-              <h6 class="mdl-dialog__title">¿Esta seguro de borrar todo?</h6>
-              <!-- <div class="mdl-dialog__content">
+          <!-- <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button> -->
+          <dialog class="mdl-dialog">
+            <h6 class="mdl-dialog__title dialog-title">¿Confirma borrar todo?</h6>
+            <div class="mdl-dialog__content">
                 <p>
-                  Allowing us to collect data will let us get you the information you want faster.
+                  ...
                 </p>
-              </div> -->
-              <div class="mdl-dialog__actions">
-                <button type="button" class="mdl-button accept">Aceptar</button>
-                <button type="button" class="mdl-button cancel">Cancelar</button>
-              </div>
-            </dialog>
+              </div> 
+            <div class="mdl-dialog__actions">
+              <button type="button" class="mdl-button accept">Aceptar</button>
+              <button type="button" class="mdl-button cancel">Cancelar</button>
+            </div>
+          </dialog>
 
-       
           <!-- ---------------------- -->
           <!--           Menú         -->
           <!-- ---------------------- -->
@@ -102,24 +104,24 @@
             <div class="w-30 ml-item">
               <!-- Buttton add product at Listed -->
               <!-- Colored FAB button with ripple -->
-              <button id="btn-entrada-producto"
+              <button
+                id="btn-entrada-producto"
                 class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--primary"
               >
                 <i class="material-icons">add_shopping_cart</i>
               </button>
-
             </div>
-            <div class="w-40">
+            <div class="w-30">
               <!-- Delete list of products -->
               <!-- Accent-colored raised button with ripple -->
-            </div>
-              <button id="btn-borrar-productos"
-                class="mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-              >Borrar<i class="material-icons">delete_sweep</i>
+              <button
+                id="btn-borrar-productos"
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+              >
+                Borrar <i class="material-icons">delete_sweep</i>
               </button>
-
             </div>
-
+          </div>
 
           <!-- ---------------------- -->
           <!--  Listado de productos  -->
