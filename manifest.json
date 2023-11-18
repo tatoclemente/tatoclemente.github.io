@@ -1,8 +1,8 @@
 {
   "name": "Supermarket Shopping List",
   "short_name": "Supermarket",
-  "theme_color": "#951b81",
-  "background_color": "#009688",
+  "theme_color": "#009688",
+  "background_color": "#fff",
   "display": "standalone",
   "orientation": "any",
   "scope": "/",
