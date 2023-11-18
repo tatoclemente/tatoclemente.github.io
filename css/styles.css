@@ -9,6 +9,13 @@
 .w-90 { width: 90%; }
 .w-100 { width: 100%; }
 
+/* .btn-delete {
+    width: 50px;
+} */
+
+.nav-bar {
+    background-color: #951b81;
+}
 .ml-item {
     margin-left: 20px;
 }
@@ -27,4 +34,13 @@
 /* Icon List */
 .demo-list-icon {
     /* width: 300px; */
+}
+
+
+img {
+    width: 100%;
+    height: 300px;
+    min-width: 800px;
+    object-fit: cover;
+    object-position: bottom;
 }

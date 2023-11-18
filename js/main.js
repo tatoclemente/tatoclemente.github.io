@@ -148,17 +148,42 @@ function listenerConfigure() {
 
     document.getElementById('btn-borrar-productos').addEventListener('click', () => {
 
-        
         console.log('btn-borrar-productos');
-        if(confirm('¿Desea borrar todos los productos?'))
-        productList.splice(0, productList.length)
-        renderLista()
+        
+        // if(confirm('¿Desea borrar todos los productos?'))
+        // productList.splice(0, productList.length)
+        // renderLista()
+        var dialog = document.querySelector('dialog');
+        dialog.showModal();
+    
     })
 }
 
+function initDialog() {
+    var dialog = document.querySelector('dialog');
+    // var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    // showDialogButton.addEventListener('click', function() {
+    //   dialog.showModal();
+    // });
+
+    dialog.querySelector('.accept').addEventListener('click', function() {
+        productList.splice(0, productList.length)
+        renderLista()
+        dialog.close();
+      });
+
+    dialog.querySelector('.cancel').addEventListener('click', function() {
+      dialog.close();
+    });
+}
 
 function start() {
     console.warn(document.querySelector('title').innerText);
+
+    initDialog()
     listenerConfigure()
     renderLista()
 }
