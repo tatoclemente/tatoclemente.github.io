@@ -91,13 +91,13 @@ self.addEventListener('fetch', e => {
 
     // ----------- Intervengo el codigo de la pagina --------------
 
-    // else if (ruta.includes('main.js')) {
+    else if (ruta.includes('main.js')) {
 
-    //     console.error('Me di cuenta que estas pidiendo el codigo principal');
-    //     const response = fetch("https://gustavoclemente.000webhostapp.com/main.js", { mode: 'no-cors' }) // CORS NO habilitado
-    //     .catch(error => console.error(`!!! ERROR EN FETCH DE CÓDIGO!!!: ${error.message}`))
-    //     e.respondWith(response)
-    // }
+        console.error('Me di cuenta que estas pidiendo el codigo principal');
+        const response = fetch("https://gustavoclemente.000webhostapp.com/main.js", { mode: 'no-cors' }) // CORS NO habilitado
+        .catch(error => console.error(`!!! ERROR EN FETCH DE CÓDIGO!!!: ${error.message}`))
+        e.respondWith(response)
+    }
 
     // ---------- Casos intervenidos pero respondiendo lo correcto -------------
     else {
