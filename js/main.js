@@ -36,7 +36,7 @@ let ul
 function renderLista() {
     // <ul class="demo-list-icon mdl-list">
     if (createList) {
-        console.log(createList);
+        // console.log(createList);
         ul = document.createElement('ul')
         ul.classList.add('demo-list-icon', 'mdl-list')
     }
@@ -180,9 +180,24 @@ function initDialog() {
     });
 }
 
-function start() {
-    console.warn(document.querySelector('title').innerText);
+function registServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+        .then(reg => {
+            console.log('Registrado')
+        })
+        .catch(err => {
+            console.warn('Error al tratar de registrar el service worker', err)
+        })
+    } else {
+        console.error('El service worker no existe en el navegador')
+    }
+}
 
+function start() {
+    // console.warn(document.querySelector('title').innerText);
+
+    registServiceWorker()
     initDialog()
     listenerConfigure()
     renderLista()
