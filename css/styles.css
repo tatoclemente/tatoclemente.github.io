@@ -40,3 +40,9 @@ img {
     object-fit: cover;
     object-position: bottom;
 }
+
+progress {
+    width: 100%;
+    height: 18px;
+    display: none;
+}

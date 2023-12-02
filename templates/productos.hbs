@@ -1,0 +1,57 @@
+<ul id="contenedor-lista" class="demo-list-icon mdl-list">
+  {{#productList}}
+  <li class="mdl-list__item">
+    <!-- Product Icon -->
+    <span class="mdl-list__item-primary-content w-10">
+      <i class="material-icons mdl-list__item-icon">shopping_cart</i>
+    </span>
+    <!-- Product Name -->
+    <span class="mdl-list__item-primary-content w-30">
+      {{nombre}}
+    </span>
+    <!-- Product Quanity -->
+    <!-- Product individual erased button of product list-->
+    <span class="mdl-list__item-primary-content w-30">
+      <!-- Textfield with Floating Label -->
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input
+          onchange="updateValueProduct('cantidad', {{id}}, this)"
+          value="{{cantidad}}"
+          class="mdl-textfield__input"
+          type="text"
+          id="csntidad-{{@index}}"
+        />
+        <label
+          class="mdl-textfield__label"
+          for="cantidad-{{@index}}"
+        >Cantidad</label>
+      </div>
+    </span>
+    <!-- Product Price -->
+    <span class="mdl-list__item-primary-content w-30">
+      <!-- Textfield with Floating Label -->
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input
+          onchange="updateValueProduct('precio', {{id}}, this)"
+          value="{{precio}}"
+          class="mdl-textfield__input"
+          type="text"
+          id="precio-{{@index}}"
+        />
+        <label class="mdl-textfield__label" for="precio-{{@index}}">Precio</label>
+      </div>
+    </span>
+    <!-- Product Quanity -->
+    <span class="mdl-list__item-primary-content">
+      <!-- Colored FAB button with ripple -->
+      <button
+        onClick="deleteProduct({{id}})"
+        class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
+      >
+        <i class="material-icons">
+          remove_shopping_cart</i>
+      </button>
+    </span>
+  </li>
+  {{/productList}}
+</ul>
