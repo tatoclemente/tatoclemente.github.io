@@ -6,8 +6,14 @@ const apiProducts = (function () {
         return 'https://656b4855dac3630cf727f228.mockapi.io/api/products/' + (id || '')
     }
     async function get() {
-        const products = await $.ajax({ url: getUrl() })
-        return products
+        try {
+            const products = await $.ajax({ url: getUrl() })
+            return products
+        } catch (error) {
+            console.error('ERROR GET: ', error);
+            const pords = leerListaProductos()
+            return pords
+        }
     }
 
     async function post(product) {
